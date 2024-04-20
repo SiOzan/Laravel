@@ -7,14 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    Raja Hutan : {{$king}} <br>
-    Daftar Hewan :
-    @foreach ($hewan as $data)
-        @if($data == 'crocodile')
-            <li>{{$data}} - dia hewan setia</li>
-        @else
-            <li>{{$data}}</li>
-        @endif
-    @endforeach
+    
+    <h1>Halaman Untuk Animals</h1>
+
 </body>
 </html>
