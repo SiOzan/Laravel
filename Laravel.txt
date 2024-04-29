@@ -24,5 +24,8 @@ composer create-project laravel/laravel:^9.0 <-(versi laravel opsional) (Nama Pr
 !note : PHP/XAMPP version 8
 lokasi install project boleh dimana saja
 
+php artisan migrate
+php artisan migrate:fresh
+
 ~Menjalankan Server
 php artisan serve
