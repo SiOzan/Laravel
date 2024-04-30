@@ -26,7 +26,7 @@ class SiswaSeeder extends Seeder
         Siswa::insert(
             [
                 'nama' => 'Ambatukan Vertika',
-                'kelas' => 'XI RPL 8',
+                'kelas' => 'XI RPL 3',
                 'jenis_kelamin' => 1,
                 'alamat' => 'Leuwi Panjang',
             ]
@@ -34,7 +34,23 @@ class SiswaSeeder extends Seeder
         Siswa::insert(
             [
                 'nama' => 'Brando Steel',
-                'kelas' => 'XI RPL 5',
+                'kelas' => 'XI RPL 2',
+                'jenis_kelamin' => 0,
+                'alamat' => 'Cibaduyut',
+            ]
+        );
+        Siswa::insert(
+            [
+                'nama' => 'Alvin',
+                'kelas' => 'XI RPL 1',
+                'jenis_kelamin' => 1,
+                'alamat' => 'Cibaduyut',
+            ]
+        );
+        Siswa::insert(
+            [
+                'nama' => 'Roggy',
+                'kelas' => 'XI RPL 4',
                 'jenis_kelamin' => 0,
                 'alamat' => 'Cibaduyut',
             ]
