@@ -24,8 +24,12 @@ composer create-project laravel/laravel:^9.0 <-(versi laravel opsional) (Nama Pr
 !note : PHP/XAMPP version 8
 lokasi install project boleh dimana saja
 
+~create new table database & cara penggunaan
+php artsan make:model (nama table) --all
 php artisan migrate
+php artisan db:seed
 php artisan migrate:fresh
+php artisan migrate:fresh --seed
 
 ~Menjalankan Server
 php artisan serve

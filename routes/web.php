@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Siswa;
 use App\Models\Album_Musik;
+use App\Models\Film;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,4 +51,8 @@ Route::get('siswa', function() {
 
 Route::get('album', function() {
     return view('album');
+});
+
+Route::get('film', function() {
+    return view('film');
 });
