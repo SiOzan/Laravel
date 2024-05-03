@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class MediaFilm extends Model
 {
     use HasFactory;
+
+    public function Film() {
+        return $this->belongsTo(Film::class);
+    }
 }

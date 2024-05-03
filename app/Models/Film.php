@@ -12,4 +12,9 @@ class Film extends Model
     public function DetailFilm() {
         return $this->hasOne(DetailFilm::class);
     }
+
+    public function MediaFilm() {
+        //This = Primary Key
+        return $this->hasMany(MediaFilm::class);
+    }
 }

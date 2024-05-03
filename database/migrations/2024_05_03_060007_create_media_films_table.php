@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('detail_films', function (Blueprint $table) {
+        Schema::create('media_films', function (Blueprint $table) {
             $table->id();
-            $table->foreign('film_id')->constrained()->oneDelete('cascadey')->unique();
+            $table->foreignId('film_id')->constrained()->onDelete('cascade');
             $table->boolean('media_type')->default(0);
-            $table->string('media_title')->default('0');
+            $table->string('media_title')->default('-');
             $table->string('url_media')->nullable();
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_films');
+        Schema::dropIfExists('media_films');
     }
 };

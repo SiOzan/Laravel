@@ -13,13 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('detail_films', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('film_id')->constrained()->oneDelete('cascade')->unique();
-            $table->string('code_film')->unique();
-            $table->string('url_imdb')->unique();
-            $table->timestamps();
-        });
+        //
     }
 
     /**
@@ -29,6 +23,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_films');
+        //
     }
 };
