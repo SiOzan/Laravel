@@ -68,7 +68,7 @@ class MediaFilmSeeder extends Seeder
             'film_id' => 2,
             'media_type' => 0,
             'media_title' => 'Judul',
-            'url_media' => 'https://www.youtube.com/watch?v=s00_HGwb5Q8&pp=ygUKZGVkZSBpbm9lbg%3D%3D',
+            'url_media' => 'https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/961/2023/11/05/IMG-20231105-WA0012-3672437.jpg',
         ]);
         MediaFilm::insert([
             'film_id' => 3,
@@ -79,19 +79,19 @@ class MediaFilmSeeder extends Seeder
             'film_id' => 3,
             'media_type' => 0,
             'media_title' => 'Foto Dede Inoen',
-            'url_media' => 'https://www.youtube.com/watch?v=yuJQBJOG9Go&pp=ygUKZGVkZSBpbm9lbg%3D%3D',
+            'url_media' => 'https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/961/2023/11/05/IMG-20231105-WA0012-3672437.jpg',
         ]);
         MediaFilm::insert([
             'film_id' => 3,
             'media_type' => 0,
             'media_title' => 'Foto Dede Inoen',
-            'url_media' => 'https://www.youtube.com/watch?v=0hAf0D3cU0g&pp=ygUKZGVkZSBpbm9lbg%3D%3D' ,
+            'url_media' => 'https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/961/2023/11/05/IMG-20231105-WA0012-3672437.jpg' ,
         ]);
         MediaFilm::insert([
             'film_id' => 3,
             'media_type' => 0,
             'media_title' => 'Foto Dede Inoen',
-            'url_media' => 'https://www.youtube.com/watch?v=v3rOLlnK7ks&pp=ygUKZGVkZSBpbm9lbg%3D%3D',
+            'url_media' => 'https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/961/2023/11/05/IMG-20231105-WA0012-3672437.jpg',
         ]);
         MediaFilm::insert([
             'film_id' => 3,
