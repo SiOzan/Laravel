@@ -24,7 +24,7 @@ class FilmSeeder extends Seeder
             'deskripsi' => 'lorem ipsum.....'
         ]);
         Film::insert([
-            'judul' => 'Desxter',
+            'judul' => 'Dexter',
             'deskripsi' => 'lorem ipsum.....'
         ]);
     }

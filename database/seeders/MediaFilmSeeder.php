@@ -18,7 +18,7 @@ class MediaFilmSeeder extends Seeder
         MediaFilm::insert([
             'film_id' => 1,
             'media_type' => 1,
-            'url_media' => 'https://www.youtube.com/',
+            'url_media' => 'https://www.youtube.com/embed/yAN5uspO_hk?si=xGklHAcdR9sGSKvZ',
         ]);
         MediaFilm::insert([
             'film_id' => 1,
@@ -29,7 +29,7 @@ class MediaFilmSeeder extends Seeder
         MediaFilm::insert([
             'film_id' => 1,
             'media_type' => 1,
-            'url_media' => 'https://www.youtube.com/watch?v=nhBQRvGN4qQ&pp=ygUKZGVkZSBpbm9lbg%3D%3D',
+            'url_media' => 'https://www.youtube.com/embed/yAN5uspO_hk?si=xGklHAcdR9sGSKvZ',
         ]);
         MediaFilm::insert([
             'film_id' => 1,
@@ -46,18 +46,18 @@ class MediaFilmSeeder extends Seeder
         MediaFilm::insert([
             'film_id' => 2,
             'media_type' => 1,
-            'url_media' => 'https://www.youtube.com/watch?v=iVvkMHmVWxk&pp=ygUKZGVkZSBpbm9lbg%3D%3D',
+            'url_media' => 'https://www.youtube.com/embed/eafm1gB6SCM?si=u5tnRBTTBLkeyQtX',
         ]);
         MediaFilm::insert([
             'film_id' => 2,
             'media_type' => 1,
             'media_title' => 'Angkat',
-            'url_media' => 'https://www.youtube.com/watch?v=w4DZXMfD2js&pp=ygUKZGVkZSBpbm9lbg%3D%3D',
+            'url_media' => 'https://www.youtube.com/embed/eafm1gB6SCM?si=u5tnRBTTBLkeyQtX',
         ]);
         MediaFilm::insert([
             'film_id' => 2,
             'media_type' => 1,
-            'url_media' => 'https://www.youtube.com/watch?v=KOAFJPHnpAE&pp=ygUKZGVkZSBpbm9lbg%3D%3D',
+            'url_media' => 'https://www.youtube.com/embed/eafm1gB6SCM?si=u5tnRBTTBLkeyQtX',
         ]);
         MediaFilm::insert([
             'film_id' => 2,
@@ -73,7 +73,7 @@ class MediaFilmSeeder extends Seeder
         MediaFilm::insert([
             'film_id' => 3,
             'media_type' => 1,
-            'url_media' => 'https://www.youtube.com/watch?v=rADUhejV4KY&pp=ygUKZGVkZSBpbm9lbg%3D%3D',
+            'url_media' => 'https://www.youtube.com/embed/1UJz0O2NjOo?si=rmfky4WB_WGgMELa',
         ]);
         MediaFilm::insert([
             'film_id' => 3,
@@ -96,7 +96,7 @@ class MediaFilmSeeder extends Seeder
         MediaFilm::insert([
             'film_id' => 3,
             'media_type' => 1,
-            'url_media' => 'https://www.youtube.com/watch?v=8vDXrQolJUc&pp=ygUKZGVkZSBpbm9lbg%3D%3D',
+            'url_media' => 'https://www.youtube.com/embed/1UJz0O2NjOo?si=rmfky4WB_WGgMELa',
         ]);
 
     }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Siswa;
 use App\Models\Album_Musik;
 use App\Models\Film;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +61,10 @@ Route::get('film', function() {
 Route::get('film/{id}', function(int $id) {
     return view('detail-film', ['film' => Film::findOrFail($id)]);
 });
+
+Route::get('perkenalan', [App\Http\Controllers\MyController::class, 'introduce']);
+
+Route::get('hewan', [App\Http\Controllers\MyController::class, 'animals']);
+
+Route::get('movie', [App\Http\Controllers\MovieController::class, 'getMovie']);
+Route::get('movie/{id}', [App\Http\Controllers\MovieController::class, 'getMovieById']);

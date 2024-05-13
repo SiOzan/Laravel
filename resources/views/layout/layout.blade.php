@@ -56,7 +56,7 @@
     @include('layout.header')
     {{-- {{ End Header }} --}}
 
-    <main>
+    <main class="py-5">
 
         @yield('content')
 

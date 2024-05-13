@@ -7,19 +7,20 @@
                 <p class="lead text-muted">{{ $film->deskripsi }}</p>
                 <p>
                     <a href="{{ url($film->DetailFilm->url_imdb) }}" class="btn btn-primary my-2">Lihat Halaman IMDB</a>
-                    <a href="{{ url('/film') }}" class="btn btn-secondary my-2">Kembali KE Halaman Home</a>
+                    <a href="{{ url('/film') }}" class="btn btn-secondary my-2">Kembali Ke Halaman Home</a>
                 </p>
             </div>
         </div>
     </section>
 
-    <div class="album py-5 bg-light">
+    <div class="album py-5 bg-secondary">
         <div class="container">
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 @foreach ($film->MediaFilm as $item)
                     @if ($item->media_type)
-                        <p>Url Media : <a href="{{ $item->url_media }}">Klik For Video</a></p>
+                        <iframe width="100%" height="225" src="{{ $item->url_media }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        {{-- <p>Url Media : <a href="{{ $item->url_media }}">Klik</a></p> --}}
                     @else
                         <div class="col">
                             <div class="card shadow-sm">
