@@ -12,6 +12,6 @@ class Movie extends Model
     // kolom (field) mana saja yang boleh di isi
     public $fillable = ['title', 'description', 'cover_url', 'trailer_url', 'viewer'];
 
-// kolom (field) mana saja yang diperlihatkan
+    // kolom (field) mana saja yang diperlihatkan
     public $visible = ['title', 'description', 'cover_url', 'trailer_url', 'viewer'];
 }

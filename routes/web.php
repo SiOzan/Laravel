@@ -5,6 +5,7 @@ use App\Models\Siswa;
 use App\Models\Album_Musik;
 use App\Models\Film;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ArtikelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,3 +69,6 @@ Route::get('hewan', [App\Http\Controllers\MyController::class, 'animals']);
 
 Route::get('movie', [App\Http\Controllers\MovieController::class, 'getMovie']);
 Route::get('movie/{id}', [App\Http\Controllers\MovieController::class, 'getMovieById']);
+Route::get('artikel', [App\Http\Controllers\ArtikelController::class, 'getArtikel']);
+Route::get('artikel/{id}', [App\Http\Controllers\ArtikelController::class, 'getArtikelById']);
+Route::get('artikel/kategori/{kategori}', [App\Http\Controllers\ArtikelController::class, 'getArtikelByKategori']);
