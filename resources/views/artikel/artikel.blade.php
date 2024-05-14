@@ -10,14 +10,16 @@
                 @foreach ($artikel as $item)
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="{{ $item->gambar_artikel }}" class="card-img-top" alt="..." width="100%" height="230px">
+                            <img src="{{ $item->foto }}" class="card-img-top" alt="..." width="100%"
+                                height="230px">
 
                             <div class="card-body">
                                 <p class="card-text"><b>{{ $item->judul }}</b></p>
                                 {{-- <p><a href="">{{ $item->kategori }}</a></p> --}}
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="{{ url('artikel/'. $item->id) }}" class="btn btn-sm btn-outline-secondary">Baca Artikel</a>
+                                        <a href="{{ url('artikel/' . $item->id) }}"
+                                            class="btn btn-sm btn-outline-secondary">Baca Artikel</a>
                                     </div>
                                 </div>
                             </div>
@@ -26,9 +28,12 @@
                 @endforeach
             </div>
             <p>
-                <a type="button" class="btn btn-outline-secondary" href="{{ url('artikel/kategori/'. $item->kategori) }}">Sejarah & Arkeologi</a>
-                <a type="button" class="btn btn-outline-secondary" href="{{ url('artikel/kategori/'. $item->kategori) }}">Wisata Kuliner</a>
-                <a type="button" class="btn btn-outline-secondary" href="{{ url('artikel/kategori/'. $item->kategori) }}">Teknologi & Lingkungan</a>
+                <a type="button" class="btn btn-outline-secondary"
+                    href="{{ url('artikel/kategori/Sejarah & Arkeologi') }}">Sejarah & Arkeologi</a>
+                <a type="button" class="btn btn-outline-secondary"
+                    href="{{ url('artikel/kategori/Wisata Kuliner') }}">Wisata Kuliner</a>
+                <a type="button" class="btn btn-outline-secondary"
+                    href="{{ url('artikel/kategori/Teknologi & Lingkungan') }}">Teknologi & Lingkungan</a>
             </p>
         </div>
     </div>

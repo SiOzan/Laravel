@@ -1,11 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Models\Siswa;
-use App\Models\Album_Musik;
 use App\Models\Film;
-use App\Http\Controllers\MovieController;
-use App\Http\Controllers\ArtikelController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,20 +42,20 @@ Route::get('/sample/{nama}', function (Request $request, $nama) {
     return view('sample', compact('nama2'));
 });
 
-Route::get('siswa', function() {
+Route::get('siswa', function () {
     return view('siswa');
     // return Siswa::all();
 });
 
-Route::get('album', function() {
+Route::get('album', function () {
     return view('album');
 });
 
-Route::get('film', function() {
+Route::get('film', function () {
     return view('film');
 });
 
-Route::get('film/{id}', function(int $id) {
+Route::get('film/{id}', function (int $id) {
     return view('detail-film', ['film' => Film::findOrFail($id)]);
 });
 

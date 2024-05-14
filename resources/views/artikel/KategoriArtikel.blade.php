@@ -10,14 +10,16 @@
                 @foreach ($artikel as $item)
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="{{ $item->gambar_artikel }}" class="card-img-top" alt="..." width="100%" height="230px">
+                            <img src="{{ $item->foto }}" class="card-img-top" alt="..." width="100%"
+                                height="230px">
 
                             <div class="card-body">
                                 <p class="card-text"><b>{{ $item->judul }}</b></p>
-                                <p>{{$item->kategori}}</p>
+                                <p>{{ $item->kategori }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="{{ url('artikel/'. $item->id) }}" class="btn btn-sm btn-outline-secondary">Baca Artikel</a>
+                                        <a href="{{ url('artikel/' . $item->id) }}"
+                                            class="btn btn-sm btn-outline-secondary">Baca Artikel</a>
                                     </div>
                                 </div>
                             </div>
@@ -25,7 +27,8 @@
                     </div>
                 @endforeach
             </div>
-            <a type="button" class="btn btn-outline-secondary mt-5" href="{{ url('/artikel') }}">kembali ke halaman artikel</a>
+            <a type="button" class="btn btn-outline-secondary mt-5" href="{{ url('/artikel') }}">kembali ke halaman
+                artikel</a>
         </div>
     </div>
 @endsection
