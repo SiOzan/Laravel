@@ -29,7 +29,7 @@
             </div>
             <p>
                 <a type="button" class="btn btn-outline-secondary"
-                    href="{{ url('artikel/kategori/Sejarah & Arkeologi') }}">Sejarah & Arkeologi</a>
+                    href="{{ url('artikel/kategori/Sejarah & Arkeologi') }}">Sejarah</a>
                 <a type="button" class="btn btn-outline-secondary"
                     href="{{ url('artikel/kategori/Wisata Kuliner') }}">Wisata Kuliner</a>
                 <a type="button" class="btn btn-outline-secondary"

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Film;
+use App\Http\Controllers\PenulisController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,3 +69,10 @@ Route::get('movie/{id}', [App\Http\Controllers\MovieController::class, 'getMovie
 Route::get('artikel', [App\Http\Controllers\ArtikelController::class, 'getArtikel']);
 Route::get('artikel/{id}', [App\Http\Controllers\ArtikelController::class, 'getArtikelById']);
 Route::get('artikel/kategori/{kategori}', [App\Http\Controllers\ArtikelController::class, 'getArtikelByKategori']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route crud
+Route::resource('penulis', Penuliscontroller::class);
