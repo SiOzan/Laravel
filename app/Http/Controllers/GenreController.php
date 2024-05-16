@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+// use App\Http\Requests\StoreGenreRequest;
+// use App\Http\Requests\UpdateGenreRequest;
+use Illuminate\Http\Request;
 use App\Models\Genre;
-use App\Http\Requests\StoreGenreRequest;
-use App\Http\Requests\UpdateGenreRequest;
 
 class GenreController extends Controller
 {
@@ -15,7 +16,8 @@ class GenreController extends Controller
      */
     public function index()
     {
-        //
+        $genres = Genre::orderBy('id', 'desc')->get();
+        return view('genre.index', compact('genres'));
     }
 
     /**
@@ -25,7 +27,7 @@ class GenreController extends Controller
      */
     public function create()
     {
-        //
+        return view('genre.create');
     }
 
     /**
@@ -34,9 +36,17 @@ class GenreController extends Controller
      * @param  \App\Http\Requests\StoreGenreRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreGenreRequest $request)
+    public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'genre' => 'required|max:235',
+        ]);
+
+        $genres = new Genre();
+        $genres->genre = $request->genre;
+        $genres->save();
+
+        return redirect()->route('genre.index')->with('success', 'data berhasil ditambahkan');
     }
 
     /**
@@ -45,9 +55,10 @@ class GenreController extends Controller
      * @param  \App\Models\Genre  $genre
      * @return \Illuminate\Http\Response
      */
-    public function show(Genre $genre)
+    public function show($id)
     {
-        //
+        $genres = Genre::findOrFail($id);
+        return view('genre.show', compact('genres'));
     }
 
     /**
@@ -56,9 +67,10 @@ class GenreController extends Controller
      * @param  \App\Models\Genre  $genre
      * @return \Illuminate\Http\Response
      */
-    public function edit(Genre $genre)
+    public function edit($id)
     {
-        //
+        $genres = Genre::findOrFail($id);
+        return view('genre.edit', compact('genres'));
     }
 
     /**
@@ -68,9 +80,18 @@ class GenreController extends Controller
      * @param  \App\Models\Genre  $genre
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateGenreRequest $request, Genre $genre)
+    public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'genre' => 'required|max:235',
+        ]);
+
+        $genres = Genre::findOrFail($id);
+        $genres->genre = $request->genre;
+        $genres->save();
+
+        return redirect()->route('genre.index')->with('success', 'data berhasil diubah');
+
     }
 
     /**
@@ -79,8 +100,12 @@ class GenreController extends Controller
      * @param  \App\Models\Genre  $genre
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Genre $genre)
+    public function destroy($id)
     {
-        //
+        $genres = Genre::findOrFail($id);
+        $genres->delete();
+
+        return redirect()->route('genre.index')->with('success', 'data berhasil dihapus!');
+
     }
 }

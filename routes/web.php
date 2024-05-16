@@ -2,6 +2,8 @@
 
 use App\Models\Film;
 use App\Http\Controllers\PenulisController;
+use App\Http\Controllers\GenreController;
+use App\Http\Controllers\BukuController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -76,3 +78,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // Route crud
 Route::resource('penulis', Penuliscontroller::class);
+Route::resource('genre', Genrecontroller::class);
+Route::resource('buku', Bukucontroller::class);

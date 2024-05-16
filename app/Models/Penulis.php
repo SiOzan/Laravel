@@ -11,6 +11,7 @@ class Penulis extends Model
 
     public $fillable = ['nama_penulis', 'bio'];
     public $villable = ['nama_penulis', 'bio'];
+    public $timestamps = true;
 
     // membuat relasi one to Many ke model buku
     public function buku(){
